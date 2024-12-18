@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abi Blaze Core</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slideAnimation 20s infinite steps(1);
+        }
+
+        .slide {
+            flex: 1 0 100%;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+       
+
+        @keyframes slideAnimation {
+            0% { transform: translateX(0); }
+            10% { transform: translateX(-100%); }
+            20% { transform: translateX(-200%); }
+            30% { transform: translateX(-300%); }
+            40% { transform: translateX(-400%); }
+            50% { transform: translateX(-500%); }
+            60% { transform: translateX(-600%); }
+            70% { transform: translateX(-700%); }
+            80% { transform: translateX(-800%); }
+            90% { transform: translateX(-900%); }
+            100% { transform: translateX(-1000%); }
+        }
+
+        /* Container for studio name and "Coming Soon" */
+        .studio-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 100%;
+            padding: 20px 0; /* Add some padding for space around the text */
+            box-sizing: border-box;
+        }
+
+        /* Transparent gray background bar */
+        .studio-bar {
+            background-color: rgba(128, 128, 128, 0.8); /* Gray with transparency */
+            width: 100%;
+            padding: 20px 0; /* Adjust the height of the bar based on text size */
+            box-sizing: border-box;
+        }
+
+        .studio-name {
+            font-size: 10vw; /* Scales based on viewport width */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            white-space: nowrap; /* Prevents the text from breaking into two lines */
+        }
+
+        .coming-soon {
+            font-size: 3vw; /* Scales based on viewport width */
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide" style="background-image: url('images/game1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/game2.png');"></div>
+            <div class="slide" style="background-image: url('images/game3.png');"></div>
+            <div class="slide" style="background-image: url('images/game4.png');"></div>
+            <div class="slide" style="background-image: url('images/game5.png');"></div>
+            <div class="slide" style="background-image: url('images/game6.png');"></div>
+            <div class="slide" style="background-image: url('images/game7.png');"></div>
+            <div class="slide" style="background-image: url('images/game8.png');"></div>
+            <div class="slide" style="background-image: url('images/game9.png');"></div>
+            <div class="slide" style="background-image: url('images/game10.png');"></div>
+        </div>
+    </div>
+
+    <!-- Studio name and Coming Soon with a transparent gray bar -->
+    <div class="studio-info">
+        <div class="studio-bar">
+            <div class="studio-name">ABI BLAZE CORE</div>
+            <div class="coming-soon">Coming Soon</div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
